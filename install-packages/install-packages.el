@@ -15,6 +15,7 @@
     cyberpunk-theme
     elpy
     exec-path-from-shell
+    fill-column-indicator
     flycheck
     go-add-tags
     go-autocomplete

@@ -1,18 +1,25 @@
-;; development.el - Load All Development Configuration
+;;; development.el --- Load All Development Configuration
 
-;; Author: Kyle W. Purdon (kpurdon)
-;;
-;; This file is not part of GNU Emacs.
+;;; Commentary:
+;;; Author: Kyle W. Purdon (kpurdon)
+;;;
+;;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Code:
 
 (require 'rainbow-delimiters)
+(require 'fill-column-indicator)
+
+(setq fci-rule-column 100)
+(setq fci-rule-width 1)
+(setq fci-rule-color "darkgrey")
 
 (global-flycheck-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'subword-mode)
+(add-hook 'prog-mode-hook 'fci-mode)
 
 (require '_python)
 (require '_golang)
@@ -23,4 +30,4 @@
 
 (provide 'development)
 
-;; development.el ends here
+;;; development.el ends here
