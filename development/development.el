@@ -8,8 +8,8 @@
 ;;; Code:
 
 (require 'rainbow-delimiters)
-(require 'fill-column-indicator)
 
+(require 'fill-column-indicator)
 (setq fci-rule-column 100)
 (setq fci-rule-width 1)
 (setq fci-rule-color "darkgrey")
@@ -20,6 +20,7 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'subword-mode)
 (add-hook 'prog-mode-hook 'fci-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (require '_python)
 (require '_golang)
