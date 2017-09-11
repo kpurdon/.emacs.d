@@ -56,6 +56,8 @@
 (sml/setup)
 (add-to-list 'sml/replacer-regexp-list
              '("^~/go" ":go:") t)
+(add-to-list 'sml/replacer-regexp-list
+             '("^/bitly/src/github.com/bitly/bitly" ":bitly:") t)
 
 (require 'development)
 

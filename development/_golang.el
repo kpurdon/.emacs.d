@@ -1,10 +1,11 @@
-;; _golang.el -- custom golang configuration
+;;; _golang.el -- custom golang configuration
 
-;; Author: Kyle W. Purdon (kpurdon)
-;;
-;; This file is not part of GNU Emacs.
+;;; Commentary:
+;;; Author: Kyle W. Purdon (kpurdon)
+;;;
+;;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Code:
 
 (require 'go-mode)
 
@@ -30,4 +31,4 @@
 
 (provide '_golang)
 
-;; _golang.el ends here
+;;; _golang.el ends here
