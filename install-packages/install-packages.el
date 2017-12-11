@@ -12,13 +12,14 @@
 
 (defvar my-packages
   '(better-defaults
+    company
+    company-go
     cyberpunk-theme
     elpy
     exec-path-from-shell
     fill-column-indicator
     flycheck
     go-add-tags
-    go-autocomplete
     go-eldoc
     go-guru
     go-mode

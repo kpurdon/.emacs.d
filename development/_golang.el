@@ -11,9 +11,11 @@
 
 (exec-path-from-shell-copy-env "GOPATH")
 
-(require 'auto-complete)
-(require 'go-autocomplete)
-(ac-config-default)
+(require 'company)
+(require 'company-go)
+(add-hook 'go-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-go))
+                          (company-mode)))
 
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
