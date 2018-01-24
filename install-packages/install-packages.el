@@ -27,7 +27,6 @@
     json-mode
     magit
     markdown-mode
-    markdown-preview-mode
     osx-clipboard
     py-autopep8
     rainbow-delimiters
