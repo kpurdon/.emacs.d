@@ -1,10 +1,12 @@
 ;; _python.el -- custom python configuration
 
+;;; Commentary:
+
 ;; Author: Kyle W. Purdon (kpurdon)
 ;;
 ;; This file is not part of GNU Emacs.
 
-;; Code:
+;;; Code:
 
 (elpy-enable)
 
@@ -26,4 +28,4 @@
 
 (provide '_python)
 
-;; _python.el ends here
+;;; _python.el ends here
