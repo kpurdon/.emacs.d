@@ -23,7 +23,6 @@
     go-eldoc
     go-guru
     go-mode
-    js2-mode
     json-mode
     magit
     markdown-mode

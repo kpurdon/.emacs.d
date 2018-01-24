@@ -25,7 +25,6 @@
 (require '_python)
 (require '_golang)
 (require '_markdown)
-(require '_javascript)
 (require '_web)
 (require '_json)
 
