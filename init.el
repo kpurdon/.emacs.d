@@ -63,12 +63,35 @@
 
 ;; fix issues with company and fci-mode
 ;; https://github.com/alpaker/Fill-Column-Indicator/issues/54
-(defun on-off-fci-before-company(command)
-  (when (string= "show" command)
-    (turn-off-fci-mode))
-  (when (string= "hide" command)
-    (turn-on-fci-mode)))
-(advice-add 'company-call-frontends :before #'on-off-fci-before-company)
+;; https://github.com/alpaker/Fill-Column-Indicator/issues/46
+(defvar-local my-fci-mode-stack '()
+  "track fci-mode state to aid advice functions.")
+
+(defun fci-conditional-enable (&rest _)
+  "Conditionally (re-)enable fci-mode."
+  (when (eq (pop my-fci-mode-stack) t)
+    (fci-mode t)))
+
+(defun fci-get-and-disable (&rest _)
+  "Store current status of fci-mode, and disable if needed."
+  (when (boundp 'fci-mode)
+    (push fci-mode my-fci-mode-stack)
+    (when fci-mode
+      (fci-mode -1))))
+
+(defun fci-hack (advised-func &rest args)
+  "Disable fci-mode, call ADVISED-FUNC with ARGS, then re-enable fci-mode."
+  (progn
+    (fci-get-and-disable)
+    (apply advised-func args)
+    (fci-conditional-enable)))
+
+;; disable fci-mode while certain operations are being performed
+(advice-add 'web-mode-on-after-change :around #'fci-hack)
+(advice-add 'web-mode-on-post-command :around #'fci-hack)
+(add-hook 'company-completion-started-hook 'fci-get-and-disable)
+(add-hook 'company-completion-cancelled-hook 'fci-conditional-enable)
+(add-hook 'company-completion-finished-hook 'fci-conditional-enable)
 
 ;; customize company-mode
 (setq company-idle-delay 0)
