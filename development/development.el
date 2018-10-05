@@ -27,6 +27,7 @@
 (require '_markdown)
 (require '_web)
 (require '_json)
+(require '_terraform)
 
 (provide 'development)
 

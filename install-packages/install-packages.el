@@ -30,6 +30,7 @@
     py-autopep8
     rainbow-delimiters
     smart-mode-line
+    terraform-mode
     web-mode
     yaml-mode))
 
