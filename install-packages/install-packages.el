@@ -15,6 +15,7 @@
     company
     company-go
     cyberpunk-theme
+    direnv
     elpy
     exec-path-from-shell
     fill-column-indicator

@@ -14,6 +14,9 @@
 (setq fci-rule-width 1)
 (setq fci-rule-color "darkgrey")
 
+(require 'direnv)
+(direnv-mode)
+
 (global-flycheck-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
