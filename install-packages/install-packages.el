@@ -24,11 +24,13 @@
     go-eldoc
     go-guru
     go-mode
+    js2-mode
     json-mode
     magit
     markdown-mode
     osx-clipboard
     py-autopep8
+    py-isort
     rainbow-delimiters
     smart-mode-line
     terraform-mode

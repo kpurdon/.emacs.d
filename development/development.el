@@ -31,6 +31,7 @@
 (require '_web)
 (require '_json)
 (require '_terraform)
+(require '_js)
 
 (provide 'development)
 
