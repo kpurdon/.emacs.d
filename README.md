@@ -12,6 +12,7 @@ Custom configuration is included for the following development modes:
 * Golang
     * Automated struct tags (via [emacs-go-add-tags](https://github.com/syohex/emacs-go-add-tags))
     * ElDoc support (via [emacs-go-eldoc](https://github.com/syohex/emacs-go-eldoc))
+	* [golangci-lint integration](https://github.com/weijiangan/flycheck-golangci-lint)
     * Optional golint integration
     * Optional guru (formerly oracle) integration
 * Python
@@ -33,7 +34,8 @@ Custom configuration is included for the following development modes:
 * `go get -u golang.org/x/tools/cmd/goimports`
 * `go get -u github.com/nsf/gocode` (NOTE: this is a mess, see gocode README)
 * `go get -u github.com/rogpeppe/godef`
-* (optional) `go get -u github.com/golang/lint/golint` (requires go 1.5+)
+* Install [golangci-lint](https://github.com/golangci/golangci-lint#local-installation)
+* (optional) `go get -u golang.org/x/lint/golint` (requires go 1.5+)
 * (optional) `go get -u golang.org/x/tools/cmd/guru`
 
 #### Python (see development/_python.el)

@@ -14,8 +14,16 @@
 (require 'company)
 (require 'company-go)
 (add-hook 'go-mode-hook (lambda ()
+                          ;; https://github.com/flycheck/flycheck/pull/1525
+                          (setq flycheck-disabled-checkers '(go-build go-vet))
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)))
+
+;; https://github.com/weijiangan/flycheck-golangci-lint
+(eval-after-load 'flycheck
+  (setq flycheck-golangci-lint-tests t)
+  (setq flycheck-golangci-lint-fast t)
+  '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
 
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
