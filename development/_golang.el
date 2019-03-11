@@ -20,9 +20,9 @@
                           (company-mode)))
 
 ;; https://github.com/weijiangan/flycheck-golangci-lint
+(setq flycheck-golangci-lint-tests t)
+(setq flycheck-golangci-lint-fast t)
 (eval-after-load 'flycheck
-  (setq flycheck-golangci-lint-tests t)
-  (setq flycheck-golangci-lint-fast t)
   '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
 
 (setq gofmt-command "goimports")
