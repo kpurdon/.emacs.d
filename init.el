@@ -100,6 +100,13 @@
 (setq company-echo-delay 0)
 (setq company-minimum-prefix-length 1)
 
+;; ignore some things in grep
+(eval-after-load 'grep
+  '(progn
+     (add-to-list 'grep-find-ignored-directories ".data")
+     (add-to-list 'grep-find-ignored-directories ".direnv")
+     (add-to-list 'grep-find-ignored-directories "node_modules")))
+
 (require 'development)
 
 (load custom-file)
