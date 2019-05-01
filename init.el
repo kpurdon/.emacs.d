@@ -57,7 +57,9 @@
 (add-to-list 'sml/replacer-regexp-list
              '("^~/go" ":go:") t)
 (add-to-list 'sml/replacer-regexp-list
-             '("^/bitly/src/github.com/bitly/bitly" ":bitly:") t)
+             '("^~/code/github.com/syndio/ce" ":ce:") t)
+(add-to-list 'sml/replacer-regexp-list
+             '("^~/code/github.com/syndio/syndio" ":syndio:") t)
 
 (add-hook 'after-init-hook 'global-company-mode)
 
