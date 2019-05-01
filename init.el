@@ -109,6 +109,12 @@
 
 (require 'development)
 
+;; put all backups in /tmp
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 (load custom-file)
 
 (defvar emacs_home (getenv "EMACS_HOME"))
