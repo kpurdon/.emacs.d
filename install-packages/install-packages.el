@@ -10,6 +10,9 @@
 
 (require 'package)
 
+;; https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (defvar my-packages
   '(better-defaults
     company
@@ -39,7 +42,7 @@
     yaml-mode))
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 
 
 (when (not package-archive-contents)
