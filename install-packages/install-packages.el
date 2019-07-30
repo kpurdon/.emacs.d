@@ -17,7 +17,6 @@
   '(better-defaults
     company
     company-go
-    cyberpunk-theme
     direnv
     elpy
     exec-path-from-shell
@@ -39,7 +38,8 @@
     smart-mode-line
     terraform-mode
     web-mode
-    yaml-mode))
+    yaml-mode
+    zenburn-theme))
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))

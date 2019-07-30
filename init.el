@@ -43,7 +43,7 @@
         (mark " "
               (name 16 -1) " " filename)))
 
-(load-theme 'cyberpunk t)
+(load-theme 'zenburn t)
 (windmove-default-keybindings)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
