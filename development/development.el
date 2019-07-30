@@ -9,11 +9,6 @@
 
 (require 'rainbow-delimiters)
 
-(require 'fill-column-indicator)
-(setq fci-rule-column 100)
-(setq fci-rule-width 1)
-(setq fci-rule-color "darkgrey")
-
 (require 'direnv)
 (direnv-mode)
 

@@ -20,7 +20,6 @@
     direnv
     elpy
     exec-path-from-shell
-    fill-column-indicator
     flycheck
     flycheck-golangci-lint
     go-add-tags

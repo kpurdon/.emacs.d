@@ -10,7 +10,6 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . gfm-mode))
 
-(setq-default fill-column 100)
 (add-hook 'gfm-mode 'auto-fill-mode)
 
 (provide '_markdown)
