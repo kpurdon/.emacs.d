@@ -4,7 +4,7 @@ My personal emacs configuration. This configuration is built to work with [Emacs
 
 ```
 $ emacs --version
-GNU Emacs 25.1.1
+GNU Emacs 26.2
 ```
 
 Custom configuration is included for the following development modes:
@@ -40,5 +40,5 @@ Custom configuration is included for the following development modes:
 
 #### Python (see development/_python.el)
 
-* `pip install rope jedi isort`
+* `pip install rope jedi isort flake8`
 * (optional) `pip install autopep8`
