@@ -20,7 +20,6 @@
 (require 'better-defaults)
 
 (setq inhibit-startup-message t
-      linum-format "%4d \u2502 "
       backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       inhibit-startup-message t
@@ -34,7 +33,7 @@
 
 (osx-clipboard-mode +1)
 
-(global-linum-mode t)
+(global-display-line-numbers-mode)
 
 ;; modify ibuffer-formats to set name column wider
 (setq ibuffer-formats
