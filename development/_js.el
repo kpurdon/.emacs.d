@@ -12,9 +12,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.js?\\'" . js2-mode))
 
-;; tab indent
-(setq-default indent-tabs-mode t)
-
 (provide '_js)
 
 ;;; _js.el ends here
