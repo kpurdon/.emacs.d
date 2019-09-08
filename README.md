@@ -13,10 +13,10 @@ Custom configuration is included for the following development modes:
     * Automated struct tags (via [emacs-go-add-tags](https://github.com/syohex/emacs-go-add-tags))
     * ElDoc support (via [emacs-go-eldoc](https://github.com/syohex/emacs-go-eldoc))
 	* [golangci-lint integration](https://github.com/weijiangan/flycheck-golangci-lint)
-    * Optional golint integration
-    * Optional guru (formerly oracle) integration
+    * golint integration
+    * guru (formerly oracle) integration
 * Python
-    * Optional autopep8 support
+    * autopep8 integration
 * Markdown
 * JSON
     * via [json-mode](https://github.com/joshwnj/json-mode)
@@ -29,16 +29,10 @@ Custom configuration is included for the following development modes:
 2. Run `cd $HOME && rm -rf ./.emacs.d && git clone git@github.com:kpurdon/.emacs.d.git`
 3. Install the following dependencies:
 
-#### Golang (see development/_golang.el)
+#### Golang (see development/_golang.el for config)
 
-* `go get -u golang.org/x/tools/cmd/goimports`
-* `go get -u github.com/nsf/gocode` (NOTE: this is a mess, see gocode README)
-* `go get -u github.com/rogpeppe/godef`
-* Install [golangci-lint](https://github.com/golangci/golangci-lint#local-installation)
-* (optional) `go get -u golang.org/x/lint/golint` (requires go 1.5+)
-* (optional) `go get -u golang.org/x/tools/cmd/guru`
+Run `./scripts/setup_go.sh`
 
-#### Python (see development/_python.el)
+#### Python (see development/_python.el for config)
 
-* `pip install rope jedi isort flake8`
-* (optional) `pip install autopep8`
+Run `./scripts/setup_python.sh`
