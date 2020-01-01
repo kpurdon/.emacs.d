@@ -32,6 +32,8 @@
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+(setq elpy-rpc-virtualenv-path 'current)
+
 (provide '_python)
 
 ;;; _python.el ends here
