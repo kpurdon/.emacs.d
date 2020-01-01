@@ -2,4 +2,4 @@
 
 # installs all tooling required for python + emacs
 
-pip install rope jedi isort flake8 autopep8
+pip install elpy rope jedi isort flake8 flake8-isort autopep8
