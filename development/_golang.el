@@ -10,6 +10,7 @@
 (require 'go-mode)
 
 (exec-path-from-shell-copy-env "GOPATH")
+(exec-path-from-shell-copy-env "GOROOT")
 
 (require 'company)
 (require 'company-go)
