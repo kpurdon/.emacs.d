@@ -72,6 +72,7 @@
   '(progn
      (add-to-list 'grep-find-ignored-directories ".data")
      (add-to-list 'grep-find-ignored-directories ".direnv")
+     (add-to-list 'grep-find-ignored-directories ".terraform")
      (add-to-list 'grep-find-ignored-directories "node_modules")))
 
 (require 'development)
