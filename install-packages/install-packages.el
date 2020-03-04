@@ -28,6 +28,8 @@
     go-mode
     js2-mode
     json-mode
+    lsp-mode
+    lsp-ui
     magit
     markdown-mode
     osx-clipboard
