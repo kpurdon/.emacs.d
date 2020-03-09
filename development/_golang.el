@@ -50,6 +50,9 @@
 (require 'go-eldoc)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
+;; ignore common things for lsp-mode
+(setq lsp-file-watch-ignored '(".data" ".git" ".direnv"))
+
 (provide '_golang)
 
 ;;; _golang.el ends here
