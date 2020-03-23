@@ -24,6 +24,8 @@ Custom configuration is included for the following development modes:
     * Editor basics via [web-mode](http://web-mode.org/)
 * JS
     * Editor basics via [js2-mode](https://github.com/mooz/js2-mode)
+* YAML
+    * Editor basics via [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 ### Quickstart
 

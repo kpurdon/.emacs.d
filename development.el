@@ -43,5 +43,6 @@
 (load "~/.emacs.d/markdown.el")
 (load "~/.emacs.d/web.el")
 (load "~/.emacs.d/python.el")
+(load "~/.emacs.d/yaml.el")
 
 ;;; development.el ends here
