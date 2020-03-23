@@ -10,6 +10,10 @@
 
 ;;; Code:
 
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize)))
+
 ;; use better defaults, a good place to start
 ;; https://github.com/technomancy/better-defaults
 (use-package better-defaults)
