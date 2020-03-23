@@ -26,6 +26,22 @@
   :config
   (add-hook `prog-mode-hook `rainbow-delimiters-mode))
 
+;; allow for development modes to use language servers
+;; install lsp-mode, lsp-ui, and company-lsp
+;; these will be initialized as needed by specific language configs
+(use-package lsp-mode
+  :config
+  ;; ignore common things for lsp-mode
+  (setq lsp-file-watch-ignored '(".data" ".git" ".direnv" "node_modules")))
+(use-package lsp-ui)
+(use-package company-lsp)
 
+(load "~/.emacs.d/golang.el")
+(load "~/.emacs.d/terraform.el")
+(load "~/.emacs.d/json.el")
+(load "~/.emacs.d/js.el")
+(load "~/.emacs.d/markdown.el")
+(load "~/.emacs.d/web.el")
+(load "~/.emacs.d/python.el")
 
 ;;; development.el ends here
