@@ -92,4 +92,9 @@
   :config
   (direnv-mode))
 
+;; make the column name wider in ibuffer
+(setq ibuffer-formats
+      '((mark modified read-only " " (name 40 40 :left :elide) " " filename)
+        (mark " " (name 16 -1) " " filename)))
+
 ;;; general.el ends here
