@@ -97,4 +97,12 @@
       '((mark modified read-only " " (name 40 40 :left :elide) " " filename)
         (mark " " (name 16 -1) " " filename)))
 
+;; ignore some things in gre
+(eval-after-load 'grep
+  '(progn
+     (add-to-list 'grep-find-ignored-directories ".data")
+     (add-to-list 'grep-find-ignored-directories ".direnv")
+     (add-to-list 'grep-find-ignored-directories ".git")
+     (add-to-list 'grep-find-ignored-directories "node_modules")))
+
 ;;; general.el ends here
