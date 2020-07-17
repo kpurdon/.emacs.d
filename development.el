@@ -31,6 +31,8 @@
 ;; these will be initialized as needed by specific language configs
 (use-package lsp-mode
   :config
+  ;; don't expand snippets
+  (setq lsp-enable-snippet nil)
   ;; ignore common things for lsp-mode
   (setq lsp-file-watch-ignored '(".data" ".git" ".direnv" "node_modules")))
 (use-package lsp-ui)
