@@ -14,11 +14,13 @@
 (use-package go-mode
   :config
   ;; enable lsp
-  (add-hook 'go-mode-hook #'lsp-deferred)
-  ;; have lsp auto-format the buffer on save
+  (add-hook 'go-mode-hook #'lsp-deferred))
+
+;; TODO: move these into use-package go-mode
+(defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  ;; have lsp auto-add/remove imports on save
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
 ;; install flycheck-golangci-lint to use golangci-lint via flycheck
 (use-package flycheck-golangci-lint
