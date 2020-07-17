@@ -44,5 +44,6 @@
 (load "~/.emacs.d/web.el")
 (load "~/.emacs.d/python.el")
 (load "~/.emacs.d/yaml.el")
+(load "~/.emacs.d/docker.el")
 
 ;;; development.el ends here
