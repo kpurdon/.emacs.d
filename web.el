@@ -11,9 +11,16 @@
 ;;; Code:
 
 (use-package web-mode
-  :mode "\\.html\\'" ;; TODO: probably need to add css here?
+  :mode (("\\.html\\'" . web-mode)
+         ("\\.css\\'" . web-mode)
+         ("\\.tmpl\\'" . web-mode))
 
   :config
+
+  ;; specify template engines to use
+  (setq web-mode-engines-alist
+        '(("django" . "\\.html\\'")
+          ("go" . "\\.tmpl\\'")))
 
   ;; set the markup indent to 2 spaces
   (setq web-mode-markup-indent-offset 2)
