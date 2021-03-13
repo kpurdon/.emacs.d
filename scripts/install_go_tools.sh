@@ -2,18 +2,21 @@
 
 echo "installing go deps ..."
 
-if go version | grep -q "command not found"; then
+if ! command -v go &> /dev/null
+then
     echo "go must be intalled ... exiting"
     exit 1
 fi
 
-if brew --version | grep -q "command not found"; then
+if ! command -v brew &> /dev/null
+then
     echo "homebrew must be intalled ... exiting"
     exit 1
 fi
 
 # install golangci-lint
-if golangci-lint --version | grep -q "command not found"; then
+if ! command -v golangci-lint &> /dev/null
+then
     echo "installing golangci-lint ..."
     brew install golangci/tap/golangci-lint
 else
@@ -25,9 +28,17 @@ else
 fi
 
 # install golint
-if golint | grep -q "command not found"; then
+if ! command -v golint &> /dev/null
+    then
     echo "installing golint ..."
     go get -u golang.org/x/lint/golint
+fi
+
+# install gomodifytags
+if ! command -v gomodifytags &> /dev/null
+then
+    echo "installing gomodifytags ..."
+    go get -u github.com/fatih/gomodifytags
 fi
 
 # TODO: do we still need this w/ gopls

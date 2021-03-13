@@ -32,7 +32,10 @@
   (setq flycheck-golangci-lint-fast t))
 
 ;; allow the ability to add tags to go structs
-;; https://github.com/emacsorphanage/go-add-tags
-(use-package go-add-tags)
+;; https://github.com/brantou/emacs-go-tag
+(use-package go-tag)
+(setq go-tag-args (list "-transform" "camelcase"))
+
+
 
 ;;; golang.el ends here
