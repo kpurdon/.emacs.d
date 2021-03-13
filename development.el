@@ -34,7 +34,7 @@
   ;; don't expand snippets
   (setq lsp-enable-snippet nil)
   ;; ignore common things for lsp-mode
-  (setq lsp-file-watch-ignored '(".data" ".git" ".direnv" "node_modules")))
+  (setq lsp-file-watch-ignored '(".data" ".git" ".direnv" "node_modules" ".uploads")))
 (use-package lsp-ui)
 (use-package company-lsp)
 
