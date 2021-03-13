@@ -27,7 +27,7 @@
   (add-hook `prog-mode-hook `rainbow-delimiters-mode))
 
 ;; allow for development modes to use language servers
-;; install lsp-mode, lsp-ui, and company-lsp
+;; install lsp-mode, lsp-ui
 ;; these will be initialized as needed by specific language configs
 (use-package lsp-mode
   :config
@@ -35,8 +35,8 @@
   (setq lsp-enable-snippet nil)
   ;; ignore common things for lsp-mode
   (setq lsp-file-watch-ignored '(".data" ".git" ".direnv" "node_modules" ".uploads")))
+
 (use-package lsp-ui)
-(use-package company-lsp)
 
 (load "~/.emacs.d/golang.el")
 (load "~/.emacs.d/terraform.el")
