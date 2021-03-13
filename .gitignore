@@ -9,3 +9,4 @@ history.el
 .lsp-session-v1
 .last-package-update-day
 flycheck*.el
+/history
